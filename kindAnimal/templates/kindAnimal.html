@@ -1,0 +1,202 @@
+{% extends 'base.html' %}
+{% block import %}
+{% load staticfiles %}
+<link rel="stylesheet" href="{% static "css/kindAnimal.css" %}?ver=1">
+
+{% endblock %}
+
+
+{% block contents %}
+<div class="container">
+    <h1 class="my-4">
+    <div class="alert alert-light" role="alert">
+        <h3 style="color:black;">Pick Your Dress</h3>
+    </div> 
+</div>
+<div class="container">
+  <div class="d-flex justify-content-between">
+  <button type="button" class="btn" style="background-color: rgb(250, 135, 154);">
+    China Dress <span class="badge" style="background-color: black;">3</span>
+  </button>
+  <a href ='{% url "dressApplication" %}'class="btn" style="background-color: rgb(250, 135, 154);">
+    신청
+  </a> 
+</div>
+
+<br>
+  <div class="card-deck">
+    <div class="card">
+      <img src="{% static 'china3.jpg'%}" height="460" class="card-img-top" alt="닥스훈트">
+      <div class="card-body">
+        <h5 class="card-title">중국전통혼례복1</h5>
+        <p class="card-text"><strong>
+          </strong>젊은남녀들이 좋아하는 현대적디자인 혼례복입니다.
+          <br></p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{% static 'China1.jpg'%}" class="card-img-top" alt="진돗개">
+      <div class="card-body">
+        <h5 class="card-title">중국전통혼례복2</h5>
+        <p class="card-text"><br>신랑,신부님뿐만 아니라 자녀분들과도 함께 착용이 가능한 의복입니다.
+        </p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{% static 'china2.jpg'%}" class="card-img-top" alt="페키니즈">
+      <div class="card-body">
+        <h5 class="card-title">중국전통혼례복3</h5>
+        <p class="card-text"> <br>행운을 뜻하는 중국의 대표적인 색깔인 빨간색이 매력적인 의복입니다.
+
+        </p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+  <button type="button" class="btn" style="background-color: rgb(250, 135, 154);">
+    Vietnam Dress <span class="badge" style="background-color: black;">3</span>
+
+  </button>
+  <br><br>
+  <div class="card-deck">
+    <div class="card">
+      <img src="{% static 'Vietnam1.png'%}" class="card-img-top" alt="스코티시폴드">
+      <div class="card-body">
+        <h5 class="card-title">베트남전통혼례복1</h5>
+        <p class="card-text">베트남혼례복 중 가장 전통적인 색깔을 사용하여 제작한 의복입니다. <br> </p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{% static 'Vietnam3.jpg'%}" class="card-img-top" alt="노르웨이숲">
+      <div class="card-body">
+        <h5 class="card-title">베트남전통혼례복2</h5>
+        <p class="card-text"><strong></strong>
+          <br>신랑의 노란예복과 신부의 빨간예복이 잘 어울리는 예복입니다.
+        </p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{%static 'Vietnam2.jpg'%}" height="530" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">베트남전통혼례복3</h5>
+        <p class="card-text"> <br>신랑님은 깔끔한 양복, 신부님은 예쁜 빨간색예복이 잘 어울리는 예복입니다.</p>
+
+      </div>
+    </div>
+  </div>
+  <br>
+  <button type="button" class="btn" style="background-color: rgb(250, 135, 154);">
+    Uzbekistan Dress <span class="badge" style="background-color: black;">3</span>
+
+  </button>
+  <br><br>
+  <div class="card-deck">
+    <div class="card">
+      <img src="{% static 'tai1.jpg'%}" height="500" class="card-img-top" alt="스코티시폴드">
+      <div class="card-body">
+        <h5 class="card-title">태국전통혼례복1</h5>
+        <p class="card-text">가장 베이직한 타입의 예복입니다<br> </p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{% static 'tai2.jpg'%}" height="500" class="card-img-top" alt="노르웨이숲">
+      <div class="card-body">
+        <h5 class="card-title">태국전통혼례복2</h5>
+        <p class="card-text"><strong></strong>
+          <br>전통적인 무늬가 들어간 예복입니다.
+
+        </p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{%static 'tai3.jpg'%}" height="500" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">태국전통혼례복3</h5>
+        <p class="card-text"><strong> </strong> <br>신부님의 화사한 파란색 드레스와 신랑님의 깔끔한 화이트 의상이 잘 어울리는 예복입니다.</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <button type="button" class="btn" style="background-color: rgb(250, 135, 154);">
+    Uzbekistan Dress <span class="badge" style="background-color: black;">3</span>
+
+  </button>
+
+  <div class="card-deck">
+    <div class="card">
+      <img src="{% static 'uzbeak1.jpg'%}" height="500" class="card-img-top" alt="스코티시폴드">
+      <div class="card-body">
+        <h5 class="card-title">우즈베키스탄전통혼례복1</h5>
+        <p class="card-text">베이직하게 가장 깔끔한 디자인인 예복입니다.<br> </p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{% static 'uzbeak2.jpg'%}" height="500" class="card-img-top" alt="노르웨이숲">
+      <div class="card-body">
+        <h5 class="card-title">우즈베키스탄전통혼례복2</h5>
+        <p class="card-text"><strong></strong>
+          <br>신랑님의 노란색과 신부님의 의상패턴이 잘어울리는 예복입니다.
+        </p>
+        <p class="card-text"><small class="text-muted"></small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img src="{%static 'uzbeak3.jpg'%}" height="500" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">우즈베키스탄전통혼례복3</h5>
+        <p class="card-text"><strong> </strong> <br>우즈베키스탄 전통적인 무늬가 잘어울리는 예복입니다. 3.5~5kg</p>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="container">
+    <button type="button" class="btn" style="background-color: rgb(250, 135, 154);">
+      Philippine Dress <span class="badge" style="background-color: black;">3</span>
+
+      
+    </button>
+    <br><br>
+    <div class="card-deck">
+      <div class="card">
+        <img src="{% static 'Philippine1.jpg'%}" height="500" class="card-img-top" alt="닥스훈트">
+        <div class="card-body">
+          <h5 class="card-title">필리핀전통혼례복1</h5>
+          <p class="card-text"><strong>
+            </strong>가장 베이직하게 많이 찾으시는 디자인예복입니다.
+            <br></p>
+          <p class="card-text"><small class="text-muted"></small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{% static 'Philippine2.jpg'%}" height="500" class="card-img-top" alt="진돗개">
+        <div class="card-body">
+          <h5 class="card-title">필리핀전통혼례복2</h5>
+          <p class="card-text"><br>깔끔한 화이트 칼라가 신랑,신부님 모두 화사하게 보이는 예복입니다.
+          </p>
+          <p class="card-text"><small class="text-muted"></small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="{% static 'Philippine3.jpg'%}" height="500" class="card-img-top" alt="페키니즈">
+        <div class="card-body">
+          <h5 class="card-title">필리핀전통혼례복3</h5>
+          <p class="card-text"> <br>깔끔한 디자인의 신랑님, 현대적드레스의 매력포인트를 가미한 신부님의 드레스가 잘어울리는 예복입니다.
+
+          </p>
+          <p class="card-text"><small class="text-muted"></small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+<<<<<<< HEAD=======>>>>>>> d085c70d695a426f5d988ac5f8564ed0327d0c52

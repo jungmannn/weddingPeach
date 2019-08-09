@@ -1,0 +1,56 @@
+{% extends 'base.html' %}<!--메뉴 가져오기 위해-->
+
+{% block import %}<!--css파일 import 부분, 해당 폴더 안에있는 static 파일에서 작업-->
+    {% load staticfiles %}
+    <link rel="stylesheet" href="{% static "css/animalGoods.css" %}?ver=1" >
+{% endblock %}
+
+{% block contents %}<!--여기 안에다 코딩 해주시면 됩니다.-->
+    <div class="container">
+    <h1 class="my-4">
+            <div class="alert alert-light" role="alert">
+                <h3 style="color:black;">Review</h3>
+            </div>
+            <a class="alert alert-light" href="{% url 'write' %}" role="button">글쓰기</a>
+    </div>
+{% for goods in goodss.all %}
+<div class=container>
+
+<div class="card" >
+    <div class="card-body">
+      <h2 class="card-title">제목 : {{goods.title}}</h2>
+      <h6 class="card-subtitle mb-2 text-muted">본문 : {{goods.body}}</h6>
+
+      <!--샤진-->
+      <img class="img-fluid rounded mb-3 mb-md-0" style="width:100%; max-width:300px; height:100%; max-height:300px;"
+            src="{{goods.image.url}}" alt="">
+      <!--<img  src="{{goods.image.url}}" class="card-img-top"/>-->
+      <br><br>
+      <!--댓글달기 소스는 여기에--> 
+      {% for comment in comments.all%} 
+        <div class="comment">
+          <div class="date">{{comment.pup_date}}</div>
+          <strong>{{comment.author}}</strong>
+          <p>{{ comment.comment }}</p>
+        </div>
+       
+        {% endfor %}
+           <br>
+       <!--댓글 폼 -->
+      <form action="{% url 'comment'  %}" method="POST">
+      {% csrf_token %}
+         <div class="input-group mb-3">
+          <input type="text" class="form-control" placeholder="덧글을 남겨주세요!" name="text" id="text" aria-describedby="button-addon2">
+          </input>
+          <div class="input-group-append">
+             <input class="btn btn-outline-secondary" type="submit" id="button-addon2" value="댓글"></input>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br><br>
+{% endfor %}
+
+    
+{% endblock %}
